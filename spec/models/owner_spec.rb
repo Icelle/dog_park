@@ -7,6 +7,7 @@ describe Owner do
   it {should_not have_valid(:last_name).when('', nil)}
   it {should have_valid(:email_add).when('icelleku@gmail.com')}
   it {should_not have_valid(:email_add).when('', nil)}
+  it {should_not have_valid(:email_add).when('icelleku.com')}
 
   it { should have_many(:pets) }
 end
