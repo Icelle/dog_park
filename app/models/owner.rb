@@ -3,5 +3,7 @@ class Owner < ActiveRecord::Base
   validates :last_name, presence:true
   validates :email_add, presence:true
 
-  has_many :pets
+  has_many :pets,
+    through: :ownership,
+    inverse_of: :owners
 end
